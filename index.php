@@ -1,4 +1,5 @@
 <?php
+include_once "includes/functions.php";
 if (isset($_GET['url']) && !empty($_GET['url'])) {
 	$url = strtolower(trim($_GET['url']));
 
@@ -14,7 +15,7 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
 	die;
 }
 
-include "includes/header.php";
+include_once "includes/header.php";
 ?>
 <main class="container">
 	<div class="row mt-5">

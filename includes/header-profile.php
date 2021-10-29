@@ -1,5 +1,5 @@
 <?php
-	include "includes/functions.php";
+	include_once "includes/functions.php";
 ?>
 <!doctype html>
 <html lang="ru">
@@ -31,8 +31,9 @@
 						</li>
 						<?php } ?>
 					</ul>
-					<form class="d-flex">
-						<input class="form-control me-2" type="text" placeholder="Ссылка" aria-label="Ссылка">
+					<form class="d-flex" action="includes/add.php" method="post">
+						<input type="hidden" name="user_id" value="<?php echo $_SESSION['user']['id']; ?>">
+						<input class="form-control me-2" type="text" placeholder="Ссылка" aria-label="Ссылка" name="link">
 						<button class="btn btn-success" type="submit"><i class="bi bi-plus-lg"></i></button>
 					</form>
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
